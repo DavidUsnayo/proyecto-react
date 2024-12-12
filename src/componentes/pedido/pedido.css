@@ -1,0 +1,65 @@
+
+.contenedor_pedido{
+    display:flex;
+    flex-direction: column;
+}
+.contenedor_pedido select{
+    padding:10px;
+    border-radius:10px;
+    margin:5px 0px;
+}
+.caja_cantidad{
+    display:flex;
+}
+.caja_aumentar{
+    display:flex;
+    gap:10px;
+    width:100%;
+}
+.aumentar{
+    width:100%;
+    padding:10px;
+    border:1px solid gray;
+    display:flex;
+    justify-content: space-between;
+    border-radius:10px;
+}
+.sumatoria button{
+        border-radius:50%;
+        width:20px;
+        height:20px;
+        background:none;
+        border:1px solid gray;
+        cursor: pointer;
+}
+.sumatoria label{
+    border:1px solid gray;
+    padding:3px 20px;
+    margin:0px 15px;
+    border-radius:10px;
+}
+.precio{
+    border-radius:10px;
+    border:1px solid gray;
+    display: flex;
+    align-items: center;
+    & p{
+        width:50px;
+        padding:10px;
+    }
+    & h5 {
+        padding:8px 20px;
+        border-left:1px solid gray;
+    }
+}
+
+.realizarPedido{
+    width:126px;
+    background:rgb(82, 182, 240);
+    color:white;
+    border-radius:40px;
+    border:none;
+    padding:10px;
+    margin:auto;
+    cursor:pointer;
+}

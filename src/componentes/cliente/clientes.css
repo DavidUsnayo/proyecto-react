@@ -1,0 +1,29 @@
+.caja_cliente{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    margin:15px 0px;
+    & .perfil{
+        width:35px;
+        height:35px;
+        background:#f2f2f2;
+        border-radius:50%;
+    }
+    & .usuario{
+        font-size:14px;
+        color:rgb(59, 59, 59);
+        width:150px;
+    }
+    & .fecha{
+        border:2px solid #1A3D7D;
+        color:#1A3D7D;
+        padding:5px 15px;
+        border-radius:10px;
+    }
+    & .money{
+        background:#1A3D7D;
+        color:white;
+        border-radius:10px;
+        padding:5px 15px;
+    }
+}

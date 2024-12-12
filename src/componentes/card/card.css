@@ -1,0 +1,19 @@
+
+.caja_card{
+    padding:15px 10px;
+    border-radius:30px;
+    width:214px;
+    height:123px;
+    border:1px solid rgb(222, 222, 222);
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+}
+.caja_card h5{font-size:14px;}
+.caja_card h2{font-size:36px;color:#1A3D7D}
+.caja_card p{font-size:12px; color:gray;}
+.porcentaje{
+    background:#D5FFD4;
+    padding:5px;
+    border-radius:10px;
+}
