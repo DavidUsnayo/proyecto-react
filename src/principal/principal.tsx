@@ -13,7 +13,10 @@ export function Principal(){
                     <BsHouseDoorFill />
                     <h2>Inicio</h2>
                 </div>
-                <BsFillDice4Fill/>
+                <section>
+                    <BsFillDice4Fill/>
+                    {/* <p className='baseDatos'>Base <br /> Datos <br /> <small>FIREBASE</small> </p> */}
+                </section>
             </div>
             <div className="caja_targetas">
                 <Card titulo='Clientes nuevos' numero='18'/>
@@ -34,7 +37,6 @@ export function Principal(){
                 </div>
                 <Pedido/>
             </div>
-            
         </div>
     )
 }

@@ -3,6 +3,9 @@
     display:flex;
     flex-direction: column;
 }
+.contenedor_pedido h4{
+    margin-bottom:20px;
+}
 .contenedor_pedido select{
     padding:10px;
     border-radius:10px;
@@ -31,6 +34,7 @@
         background:none;
         border:1px solid gray;
         cursor: pointer;
+        font-weight:bold;
 }
 .sumatoria label{
     border:1px solid gray;
@@ -54,12 +58,13 @@
 }
 
 .realizarPedido{
-    width:126px;
-    background:rgb(82, 182, 240);
+    width:130px;
+    background:rgb(16, 142, 215);
     color:white;
     border-radius:40px;
     border:none;
-    padding:10px;
-    margin:auto;
+    padding:11px 18px;
     cursor:pointer;
+    align-self: flex-end;
+    margin-top:10px;
 }

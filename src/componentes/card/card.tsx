@@ -1,5 +1,11 @@
 import './card.css'
-export function Card(props){
+
+interface propsCard {
+    titulo:string
+    numero:string
+    fondo?:string
+}
+export function Card(props:propsCard){
 
     return(
         <div className="caja_card">

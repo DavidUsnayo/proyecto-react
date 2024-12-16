@@ -1,24 +1,44 @@
-import { useEffect, useState } from 'react'
+import {useState } from 'react'
 import './pedido.css'
 import { db } from '../../firebase'
-import { collection, addDoc} from "firebase/firestore";
+import { collection, addDoc, onSnapshot} from "firebase/firestore";
 
 export function Pedido(){
 
     let [cantidad, setCantidad] = useState(1)
     let [usuario, setUsuario] = useState("Cliente1")
-    let [botellon, setBotellon] = useState("")
+    let [botellon, setBotellon] = useState("Botellon de 20 Lts")
     let [precio, setPrecio] = useState(18)
 
-    function agregar(usuario,botellon,cantidad){addDoc(collection(db, "pedidos"), {
+    function agregar(usuario:string,botellon:string,cantidad:number, precio:number){addDoc(collection(db, "pedidos"), {
         usuario:usuario,
         botellon:botellon,
-        cantidad:cantidad
+        cantidad:cantidad,
+        precio:precio
     }
     )}
 
+    function mostrarFirebaseEnConsola(){
+        function mostrar(callback:object){onSnapshot(collection(db, 'pedidos'), callback)}
+        mostrar(function(query:any){
+            let  pedidos:any = []
+            query.forEach((doc:any)=>{
+                let nuevo = {
+                    id:doc.id,
+                    usuario:doc.data().usuario,
+                    botellon:doc.data().botellon,
+                    cantidad:doc.data().cantidad,
+                    precio:doc.data().precio,
+                }
+                pedidos.push(nuevo)
+            })
+            console.log(pedidos)
+        })
+    }
+
     function pedido(){
-        agregar(usuario, botellon, cantidad)
+        agregar(usuario, botellon, cantidad, precio)
+        mostrarFirebaseEnConsola()
     }
 
     return(
@@ -39,9 +59,9 @@ export function Pedido(){
                     <div className="aumentar">
                         <p>Cantidad</p>
                         <div className="sumatoria">
-                            <button onClick={()=>{setCantidad(cantidad = cantidad - 1)}}>-</button>
+                            <button onClick={()=>{setCantidad(cantidad = cantidad - 1); setPrecio(cantidad * 18)}}>-</button>
                             <label> {cantidad} </label>
-                            <button onClick={()=>{setCantidad(cantidad = cantidad + 1)}}>+</button>
+                            <button onClick={()=>{setCantidad(cantidad = cantidad + 1); setPrecio(cantidad * 18)}}>+</button>
                         </div>
                         
                     </div>   

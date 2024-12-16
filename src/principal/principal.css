@@ -45,3 +45,21 @@
     display:flex;
     gap:25px;
 }
+
+/* Boton para entrar a base de datos */
+.baseDatos{
+    background:rgb(250, 227, 19);
+    padding:10px;
+    font-size:12px;
+    border-radius:5px;
+    font-weight:bold;
+    text-align:center;
+    opacity:50%;
+    position:absolute;
+    top:40%;
+    right:1%;
+    cursor:pointer;
+    & small{
+        font-size:8px;
+    }
+}

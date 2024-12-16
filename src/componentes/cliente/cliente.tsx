@@ -1,5 +1,10 @@
 import './clientes.css'
-export function Cliente(props){
+
+interface propsClientes{
+    usuario:string
+}
+
+export function Cliente(props:propsClientes){
     return(
         <div className="caja_cliente">
             <p className="perfil"></p>
